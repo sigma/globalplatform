@@ -58,7 +58,7 @@ OPGP_ERROR_STATUS OPGP_establish_context(OPGP_CARD_CONTEXT *cardContext) {
 	// unload library
 	OPGP_release_context(cardContext);
 
-	errorStatus = DYN_LoadLibrary(&cardContext->libraryHandle, (LPCTSTR)cardContext->libraryName, (LPCTSTR)cardContext->libraryVersion);
+	errorStatus = DYN_LoadLibrary(&cardContext->libraryHandle, (OPGP_CSTRING)cardContext->libraryName, (OPGP_CSTRING)cardContext->libraryVersion);
 	if (OPGP_ERROR_CHECK(errorStatus)) {
 		goto end;
 	}

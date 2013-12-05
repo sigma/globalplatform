@@ -39,7 +39,7 @@ extern "C"
 
 //! \brief Loads a library.
 OPGP_NO_API
-OPGP_ERROR_STATUS DYN_LoadLibrary(PVOID *libraryHandle, LPCTSTR libraryName, LPCTSTR version);
+OPGP_ERROR_STATUS DYN_LoadLibrary(PVOID *libraryHandle, OPGP_CSTRING libraryName, OPGP_CSTRING version);
 
 //! \brief Unloads a library.
 OPGP_NO_API
@@ -47,7 +47,7 @@ OPGP_ERROR_STATUS DYN_CloseLibrary(PVOID *libraryHandle);
 
 //! \brief Gets the address of a function in a library.
 OPGP_NO_API
-OPGP_ERROR_STATUS DYN_GetAddress(PVOID libraryHandle, PVOID *functionHandle, LPCTSTR functionName);
+OPGP_ERROR_STATUS DYN_GetAddress(PVOID libraryHandle, PVOID *functionHandle, OPGP_CSTRING functionName);
 
 #ifdef __cplusplus
 }
